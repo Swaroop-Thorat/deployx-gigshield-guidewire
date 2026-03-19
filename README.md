@@ -689,14 +689,7 @@ graph TD
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-team/gigshield.git
-cd gigshield
-
-# Backend setup
-cd backend
-npm install
-cp .env.example .env    # Add API keys (OpenWeather, Tomorrow.io, Razorpay, etc.)
-npm run dev
+git clone https://github.com/Swaroop-Thorat/deployx-gigshield-guidewire
 
 # Mobile app setup (in a new terminal)
 cd ../mobile
@@ -707,36 +700,17 @@ npx expo start
 cd ../backend
 npm run simulate:rainfall -- --zone="Mundka,Delhi" --intensity=75mm
 ```
+
 ## Environment variables Required
-
-# Weather APIs
-OPENWEATHER_API_KEY=your_key_here
-TOMORROW_IO_API_KEY=your_key_here
-
-# AQI APIs
-IQAIR_API_KEY=your_key_here
-WAQI_API_TOKEN=your_key_here
-
-# Traffic
-TOMTOM_API_KEY=your_key_here
-
-# Payments
-RAZORPAY_KEY_ID=your_key_here
-RAZORPAY_KEY_SECRET=your_secret_here
-
-# Guidewire
-GUIDEWIRE_CLOUD_URL=your_sandbox_url
-GUIDEWIRE_API_KEY=your_key_here
-
-# Firebase
-FIREBASE_PROJECT_ID=your_project_id
-
-# AWS
-AWS_REGION=ap-south-1
-AWS_ACCESS_KEY_ID=your_key_here
-AWS_SECRET_ACCESS_KEY=your_secret_here
-
-
+```text
+Weather APIs
+AQI APIs
+Traffic
+Payments
+Guidewire
+Firebase
+AWS
+```
 
 ## 9. Key Metrics for Hackathon Judges
 
@@ -760,12 +734,12 @@ AWS_SECRET_ACCESS_KEY=your_secret_here
 ## 10. Team: DeployX 🚀
 
 
-| Role | Responsibility |
-| :--- | :--- |
-| **Product Lead** | Persona research, actuarial model, hackathon narrative |
-| **Full-Stack Engineer** | React Native app, Node.js backend, AWS infrastructure |
-| **Insurance Architect** | Guidewire PolicyCenter/ClaimCenter configuration |
-| **ML Engineer** | Fraud detection algorithms, trigger consensus protocol |
+| Role | Members | Responsibility |
+| :--- | :--- | :---|
+| **Product Lead** | Kunal Solanki | Persona research, actuarial model, hackathon narrative |
+| **Full-Stack Engineer** | Ranveer Mane , Swaroop Thorat | React Native app, Node.js backend, AWS infrastructure |
+| **Insurance Architect** | Shankar Soni | Guidewire PolicyCenter/ClaimCenter configuration |
+| **ML Engineer** | Nishiraj Singh | Fraud detection algorithms, trigger consensus protocol |
 
 ---
 ## 11. License
