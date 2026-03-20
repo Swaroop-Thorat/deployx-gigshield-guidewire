@@ -342,7 +342,51 @@ To ensure **Team DeployX** remains solvent during city-wide disasters, we implem
 * [x] **Exposure Caps:** Hard-coded limits on payouts per rider per month to prevent a total pool drain.
 
 
+## 💰 Financial & Parametric Risk Model
 
+### 1. Weekly Micro-Premium Structure
+As per the core constraints of the DEVTrails Hackathon, GigShield operates exclusively on a **Weekly Pricing Model**. This aligns with the 7-day payout cycle of Indian gig workers.
+
+- **Standard Weekly Premium:** ₹35 - ₹85 (Variable based on city-wide risk indexing)  
+- **Coverage Window:** Monday 00:00 to Sunday 23:59  
+- **Collection Method:** Automated UPI Autopay/Wallet deduction every Monday morning  
+
+---
+
+### 2. AI-Powered Dynamic Pricing (Risk Profiling)
+We utilize machine learning to perform **Risk Profiling** during onboarding and throughout the policy lifecycle.
+
+- **Hyper-Local Risk Assessment:** Our model adjusts the weekly premium by ±₹5 based on the worker's primary "Dark Store" location or delivery zone (e.g., zones with high historical water-logging frequency)  
+- **Predictive Modeling:** AI analyzes upcoming weather forecasts to offer "Enhanced Protection" for high-risk weeks (e.g., Monsoon peaks or Severe Heatwave alerts)  
+
+---
+
+### 3. Parametric Trigger Engine (Automated Claims)
+GigShield eliminates the need for manual claim filing. Payouts are triggered by verifiable external data "parameters".
+
+| Disruption Type | Parametric Trigger (Source API) | Payout Logic (Income Protection) |
+|----------------|--------------------------------|----------------------------------|
+| **Heavy Rainfall** | > 15mm in 1 hour (OpenWeather/IMD) | ₹450 (Covers lost daily wages + streak bonus) |
+| **Extreme Heat** | Temp > 45°C for 3+ consecutive hours | Flat ₹150 "Health Safety" income offset |
+| **Air Quality** | AQI > 400 (Severe Category) for 4+ hours | ₹200 Daily wage protection |
+| **Social/Civic** | Curfew/Strike alert in User's Geo-fence | 70% of projected daily earnings |
+
+---
+
+### 4. Intelligent Fraud Detection & Verification
+To ensure business viability, every automated claim passes through our **AI Fraud Engine** before payout.
+
+- **Location Authenticity Score (LAS):** AI validates that the worker's GPS coordinates were within the disruption zone during the event period  
+- **Anomaly Detection:** Our model flags claims that do not align with historical activity patterns or cross-referenced traffic data  
+- **Duplicate Prevention:** Unique Platform ID verification prevents multiple payouts for the same disruption event  
+
+---
+
+### 5. Instant Payout System
+
+- **Processing Time:** < 30 minutes from trigger confirmation  
+- **Channels:** Instant transfer via UPI/Razorpay (Mocked for Phase 1)  
+- **Constraint Check:** Payouts are strictly for **Loss of Income**; no coverage for health, life, accidents, or vehicle repairs is provided  
 ---
 
 ## 4. AI/ML Integration
@@ -739,7 +783,7 @@ AWS
 | **Product Lead** | Kunal Solanki | Persona research, actuarial model, hackathon narrative |
 | **Full-Stack Engineer** | Ranveer Mane , Swaroop Thorat | React Native app, Node.js backend, AWS infrastructure |
 | **Insurance Architect** | Shankar Soni | Guidewire PolicyCenter/ClaimCenter configuration |
-| **ML Engineer** | Nishiraj Singh | Fraud detection algorithms, trigger consensus protocol |
+| **ML Engineer** | Nishiraj Singh Panwar | Fraud detection algorithms, trigger consensus protocol |
 
 ---
 ## 11. License
